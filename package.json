@@ -10,7 +10,7 @@
     "redux": "3.7.2"
   },
   "name": "textgame",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Hello Expo!",
   "author": null
 }
