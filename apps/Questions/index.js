@@ -7,7 +7,8 @@ import {
   Animated,
   ScrollView,
   Dimensions,
-  Alert
+  Modal,
+  TouchableHighlight
 } from 'react-native'
 import { connect } from 'react-redux'
 import { changeToHome, answer, next, restart } from '../../actions'
@@ -72,6 +73,23 @@ class Questions extends Component {
             Exit
           </Text>
         </TouchableOpacity>
+        <Text
+          style={{
+            maxWidth: 300,
+            fontSize: 32,
+            fontFamily: 'sans-serif-condensed',
+            color: '#fff',
+            textShadowColor: 'rgba(0,0,0,0.8)',
+            textShadowOffset: {
+              width: 2,
+              height: 2
+            },
+            textShadowRadius: 4,
+            textAlign: 'center'
+          }}
+        >
+          {score}
+        </Text>
         {questions && (
           <Headline text={_.sample(_.shuffle(questions[order].question))} />
         )}
@@ -94,13 +112,63 @@ class Questions extends Component {
               )
             })}
         </View>
-        <Text>{score}</Text>
-        <Text>
-          {lose &&
-            (() => {
-              Alert.alert('YOU LOSE', `Survived after ${score} rounds`)
-            })()}
-        </Text>
+
+        {lose && (
+          <Modal
+            animationType="slide"
+            transparent={false}
+            visible={lose}
+            onRequestClose={() => {
+              alert('Modal has been closed.')
+            }}
+          >
+            <View
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: '#333'
+              }}
+            >
+              <View>
+                <Text
+                  style={{
+                    maxWidth: 300,
+                    fontSize: 32,
+                    fontFamily: 'sans-serif-condensed',
+                    color: '#fff',
+                    textShadowColor: 'rgba(0,0,0,0.8)',
+                    textShadowOffset: {
+                      width: 2,
+                      height: 2
+                    },
+                    textShadowRadius: 4,
+                    textAlign: 'center'
+                  }}
+                >
+                  {`YOU SURVIVED ${score} ROUNDS`}
+                </Text>
+
+                <TouchableHighlight
+                  onPress={() => {
+                    this.restartEverything(), this.setState({ lose: false })
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: '#fff',
+                      textAlign: 'center',
+                      fontSize: 32,
+                      marginTop: 15
+                    }}
+                  >
+                    Exit
+                  </Text>
+                </TouchableHighlight>
+              </View>
+            </View>
+          </Modal>
+        )}
       </View>
     )
   }

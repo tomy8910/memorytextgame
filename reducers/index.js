@@ -70,6 +70,61 @@ const init = [
     id: 4,
     answer: null,
     choices: ['8s', '15s', '16s', '12s', '4s', '9s']
+  },
+  {
+    question: [
+      'You killed the target in what country?',
+      'The target died in what country?',
+      'The target perished in what country?',
+      'The country where you target died is what?'
+    ],
+    id: 5,
+    answer: null,
+    choices: ['Dubai', 'Philippines', 'Spain', 'Ecuador', 'Libertad', 'U.S.A']
+  },
+  {
+    question: [
+      "What's the password?",
+      'What is the passcode',
+      'Password is what?',
+      'What is the right password?'
+    ],
+    id: 6,
+    answer: null,
+    choices: ['1113', '1164', '1112', '1131', '1119', '1146']
+  },
+  {
+    question: [
+      'Where did you hide the flashdrive which contains the password?',
+      'Where is the flashdrive?',
+      'What is the location of the flashdrive?',
+      'Where did you last see the flashdrive?'
+    ],
+    id: 7,
+    answer: null,
+    choices: ['Dubai', 'Kentucky', 'Russia', 'Ecuador', 'Italy', 'Philippines']
+  },
+  {
+    question: [
+      'Whose life do you value most?',
+      'Who do you value most?',
+      'Which life do you value most?',
+      'What life or whose do you value the most?'
+    ],
+    id: 8,
+    answer: null,
+    choices: ['Pippen', 'Anthony', 'Nina', 'Ramon', 'Cesar', 'Fred']
+  },
+  {
+    question: [
+      'From what country are you?',
+      'Where are you from?',
+      'Where did you come from?',
+      'What is your country of origin?'
+    ],
+    id: 9,
+    answer: null,
+    choices: ['Dubai', 'Philippines', 'Spain', 'Ecuador', 'England', 'UK']
   }
 ]
 
@@ -115,9 +170,9 @@ function mainTree(
         id: 2,
         answer: null,
         choices: [
-          'Jordan',
-          'Spaghetti',
-          'Bobby Ray Parks',
+          'Jordans',
+          'Spaghetti Sauce',
+          "Bobby Ray Park's Hair",
           'Bazooka',
           'Pistol',
           'Gundam'
@@ -137,13 +192,82 @@ function mainTree(
       {
         question: [
           'How fast was the encounter?',
-          'How fast was the scuffle?',
-          'How fast did you kill your target',
-          'How fast did your target die?'
+          'How long was the scuffle?',
+          'How long before you killed your target',
+          'How long before your target died?'
         ],
         id: 4,
         answer: null,
         choices: ['8s', '15s', '16s', '12s', '4s', '9s']
+      },
+      {
+        question: [
+          'You killed the target in what country?',
+          'The target died in what country?',
+          'The target perished in what country?',
+          'The country where you target died is what?'
+        ],
+        id: 5,
+        answer: null,
+        choices: [
+          'Dubai',
+          'Philippines',
+          'Spain',
+          'Ecuador',
+          'Libertad',
+          'U.S.A'
+        ]
+      },
+      {
+        question: [
+          "What's the password?",
+          'What is the passcode',
+          'Password is what?',
+          'What is the right password?'
+        ],
+        id: 6,
+        answer: null,
+        choices: ['1113', '1164', '1112', '1131', '1119', '1146']
+      },
+      {
+        question: [
+          'Where did you hide the flashdrive which contains the password?',
+          'Where is the flashdrive?',
+          'What is the location of the flashdrive?',
+          'Where did you last see the flashdrive?'
+        ],
+        id: 7,
+        answer: null,
+        choices: [
+          'Dubai',
+          'Kentucky',
+          'Russia',
+          'Ecuador',
+          'Italy',
+          'Philippines'
+        ]
+      },
+      {
+        question: [
+          'Whose life do you value most?',
+          'Who do you value most?',
+          'Which life do you value most?',
+          'What life or whose do you value the most?'
+        ],
+        id: 8,
+        answer: null,
+        choices: ['Pippen', 'Anthony', 'Nina', 'Ramon', 'Cesar', 'Fred']
+      },
+      {
+        question: [
+          'From what country are you?',
+          'Where are you from?',
+          'Where did you come from?',
+          'What is your country of origin?'
+        ],
+        id: 9,
+        answer: null,
+        choices: ['Dubai', 'Philippines', 'Spain', 'Ecuador', 'England', 'UK']
       }
     ],
     score: 0,
