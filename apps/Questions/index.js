@@ -88,7 +88,7 @@ class Questions extends Component {
             textAlign: 'center'
           }}
         >
-          {score < 10 ? 'Brief Yourself' : score}
+          {score < 10 ? 'Brief Yourself' : score - 10}
         </Text>
         {questions && (
           <Headline text={_.sample(_.shuffle(questions[order].question))} />
@@ -146,7 +146,7 @@ class Questions extends Component {
                     textAlign: 'center'
                   }}
                 >
-                  {`YOU SURVIVED ${score} ROUNDS`}
+                  {`YOU SURVIVED ${score - 10} ROUNDS`}
                 </Text>
 
                 <TouchableHighlight
