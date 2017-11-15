@@ -88,7 +88,7 @@ class Questions extends Component {
             textAlign: 'center'
           }}
         >
-          {score}
+          {score < 10 ? 'Brief Yourself' : score}
         </Text>
         {questions && (
           <Headline text={_.sample(_.shuffle(questions[order].question))} />
