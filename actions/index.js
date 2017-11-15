@@ -17,3 +17,30 @@ export function changeToIntro() {
     type: 'INTRO'
   }
 }
+
+export function changeToInstructions() {
+  return {
+    type: 'INSTRUCT'
+  }
+}
+
+export function answer(id, answer) {
+  return {
+    type: 'ANSWER',
+    payload: {
+      id,
+      answer
+    }
+  }
+}
+export function next() {
+  return {
+    type: 'NEXT'
+  }
+}
+
+export function restart() {
+  return {
+    type: 'RESTART'
+  }
+}
