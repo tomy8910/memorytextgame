@@ -18,20 +18,14 @@ import Headline from '../components/Headline'
 import _ from 'lodash'
 
 class Questions extends Component {
-  state = {
-    order: null,
-    questions: null,
-    score: null,
-    lose: null
-  }
-
-  componentDidMount() {
-    this.setState({
+  constructor(props) {
+    super(props)
+    this.state = {
       questions: _.shuffle(this.props.questions.tree),
       order: this.props.order,
       score: this.props.questions.score,
       lose: this.props.questions.lose
-    })
+    }
   }
 
   _onPress = (id, answer) => () => {
